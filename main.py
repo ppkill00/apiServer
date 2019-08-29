@@ -37,7 +37,8 @@ def sigint_handler(signum, frame):
 # TODO define JOBS...
 
 def job():
-    logger.warn('i am here to die%s'%threading.current_thread())
+    time.sleep(10)
+    logger.warn('i am here to die %s'%threading.current_thread())
 
 schedule.every(2).seconds.do(job)
 
