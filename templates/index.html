@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block app_content %}
+<center>
+<form method="POST" action="" >
+        <H1>어플리케이션 담당자 설정 페이지 </H1> <br>
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon1">어플리케이션</span>
+            <input type="text" class="form-control"  name= "applicationVersion"  aria-describedby="sizing-addon1" width="50">
+        </div>
+        <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon1">담당자이메일</span>
+                <input type="text" class="form-control"  name= "email"  aria-describedby="sizing-addon1" width="50">
+            </div>
+            <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon1">지라  아이디</span>
+                    <input type="text" class="form-control"  name= "assigner"  aria-describedby="sizing-addon1" width="50">
+            </div>
+
+            <input type = "submit" class="btn btn-default">
+        
+</form>
+
+<table border=1>
+    <tr >
+        <th>Application</th>
+        <th>Email</th>
+        <th>Assigner</th>
+        <th>Action</th>
+    </tr>
+    {% for data in datas %}
+    <tr>
+        <td>{{data[0]}}</td><td>{{data[1]}}</td><td>{{data[2]}}</td>
+        <td>
+            <form method="post" action="deleteApplication">
+                <input type = "hidden" name= "applicationVersion" value={{data[0]}} />
+                <button name="delete_data" class="btn btn-default">Remove item</button>
+            </form>
+        </td>    
+    </tr>
+    {% endfor %}
+</table>
+</center>
+
+
+
+{% endblock %}
+

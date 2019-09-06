@@ -5,7 +5,7 @@ import schedule
 
 
 def job():
-    print("I'm working %s "% threading.current_thread())
+    print("I'm working")
 
 
 def worker_main():

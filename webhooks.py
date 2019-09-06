@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger('automatorLogger') 
 
 headers = {'Contents-Type':'application/json','Accept':'application/json'}
-url  = os.environ['HOOKURL']
+url  = 'https://hooks.slack.com/services/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'
 
 def webhook(data,status,err):
     payload={"text": str(time.strftime('%y.%m.%d. %H:%M:%S'))+" : " + os.environ['LOGNAME'] + " : Message : " + str(data)}
