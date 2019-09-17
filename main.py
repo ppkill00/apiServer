@@ -72,7 +72,7 @@ def index():
         applicationVersion = details['applicationVersion']
         email = details['email']
         assigner = details['assigner']
-        cur.execute("INSERT INTO APP_RCPT_M(APPLICATIONVERSION, EMAIL_LIST,ASSIGNER) VALUES (%s, %s, %s)", (applicationVersion, email,assigner))
+        cur.execute("INSERT INTO APP_RCPT_M(APPLICATIONVERSION, EMAIL_LIST, ASSIGNER) VALUES (%s, %s, %s)", (applicationVersion, email,assigner))
         mysql.connection.commit()
         cur.close()
         return render_template('redirect.html', message = '등록완료')

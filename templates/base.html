@@ -1,3 +1,9 @@
+<!-- 
+https://mdbootstrap.com/docs/jquery/modals/forms/
+https://bootsnipp.com/snippets/GaZG0
+https://getbootstrap.com/docs/3.4/components/#navbar
+ -->
+
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
@@ -5,16 +11,42 @@
 {% endblock %}
 
 
+<!-- {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lunar.css') }}">
+
+{% endblock %} -->
+
+
     {% block navbar %}
     <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Automator</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Menu 1<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Menu 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-default navbar-btn" data-target="#modalLoginForm" data-toggle="modal">Sign in</button>
+                        {% include 'login.html' %}
+                    </li>
+                </ul>
+            </div>
+ 
+            
+        </div>
+            
 
-        <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <button type="button" class="btn btn-default navbar-btn">Sign in</button>
     </nav>
 {% endblock %} 
 

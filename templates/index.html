@@ -25,9 +25,11 @@
 
 <table border=1>
     <tr >
-        <th>Application</th>
-        <th>Email</th>
-        <th>Assigner</th>
+        <th>어플리케이션
+        </th>
+        <th>담당자이메일</th>
+        <th>지라 아이디
+        </th>
         <th>Action</th>
     </tr>
     {% for data in datas %}
@@ -36,7 +38,7 @@
         <td>
             <form method="post" action="deleteApplication">
                 <input type = "hidden" name= "applicationVersion" value={{data[0]}} />
-                <button name="delete_data" class="btn btn-default">Remove item</button>
+                <button name="delete_data" class="btn btn-default">Remove</button>
             </form>
         </td>    
     </tr>
