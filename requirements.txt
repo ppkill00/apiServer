@@ -3,7 +3,7 @@ schedule==0.6.0
 requests==2.21
 mysql-connector==2.2.9
 cx_Oracle==7.1.2
-flask==1.0.2
+flask==2.3.2
 flask_api==1.1
 Flask-MySQLdb==0.2.0 #sudo apt-get install mysql-server libmysqlclient-dev libmariadbclient-dev
 #brew install mysql
